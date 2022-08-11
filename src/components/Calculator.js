@@ -108,16 +108,25 @@ const Calculator = () => {
 
   return (
     <>
-      <section className="container">
-        <div className="display">{next || total || 0}</div>
-        <section className="grid-container">
-          {items.map((item) => (
-            <button type="button" key={item.id} className={`grid-item ${item.type}`} id={`item${item.id}`} onClick={handleClick}>
-              {item.text}
-            </button>
-          ))}
+      <main className="row p-5">
+        <h3 className="col-4 text-black mb-3">Let&apos;s do some math!</h3>
+        <section className="col-8">
+          <div className="w-100 display">{next || total || 0}</div>
+          <section className="grid-container m-0 p-0">
+            {items.map((item) => (
+              <button
+                type="button"
+                key={item.id}
+                className={`grid-item ${item.type}`}
+                onClick={handleClick}
+                id={`item${item.id}`}
+              >
+                {item.text}
+              </button>
+            ))}
+          </section>
         </section>
-      </section>
+      </main>
     </>
   );
 };
