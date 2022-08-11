@@ -1,16 +1,22 @@
 import React from 'react';
 import './App.css';
 import Calculator from './components/Calculator';
+import Home from './components/Home';
+import Quote from './components/Quote';
+import Quote from './components/Navbar';
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
-  render() {
-    return <Calculator />;
-  }
+function App() {
+  return (
+    <HashRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="calculator" element={<Calculator />} />
+          <Route path="quote" element={<Quote />} />
+        </Route>
+      </Routes>
+    </HashRouter>
+  );
 }
 
 export default App;
