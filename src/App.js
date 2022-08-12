@@ -9,12 +9,11 @@ import Navbar from './components/Navbar';
 function App() {
   return (
     <HashRouter>
+      <Navbar />
       <Routes>
-        <Route path="/" element={<Navbar />}>
-          <Route index element={<Home />} />
-          <Route path="calculator" element={<Calculator />} />
-          <Route path="quote" element={<Quote />} />
-        </Route>
+        <Route path="/" element={<Home />} />
+        <Route path="calculator" element={<Calculator />} />
+        <Route path="quote" element={<Quote />} />
       </Routes>
     </HashRouter>
   );

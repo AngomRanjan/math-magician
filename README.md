@@ -17,7 +17,7 @@
 ## Live Demo
 [source code](https://github.com/AngomRanjan/math-magician)
 
-[Live Demo Link](https://angomranjan.github.io/math-magician/)
+[Netlify Link](https://angom-math-magician.netlify.app)
 
 ## Authors
 
